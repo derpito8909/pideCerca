@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend proyecto pidecerca",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derpito8909/pideCerca.git"
+  },
+  "keywords": [
+    "backend"
+  ],
+  "author": "David Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/derpito8909/pideCerca/issues"
+  },
+  "homepage": "https://github.com/derpito8909/pideCerca#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.7"
+  }
+}
