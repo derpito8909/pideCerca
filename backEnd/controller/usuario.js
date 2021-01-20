@@ -4,14 +4,14 @@ const error_types = require("./error_types");
 
 //controlador para el registro del usuario
 const registro = (req, res, next) => {
-	Usuario.findOne({ nombreUsuario: req.body.nombreUsuario })
+	Usuario.findOne({ correo: req.body.correo })
 		.then((data) => {
 			if (data) {
-				throw new error_types.InfoError("Este nombre de usuario ya existe");
+				throw new error_types.InfoError("Este correo del usuario ya existe");
 			} else {
 				const usuario = new Usuario();
 				usuario.nombre = req.body.nombre;
-				usuario.nombreUsuario = req.body.nombreUsuario;
+				usuario.correo = req.body.correo;
 				usuario.setPassword(req.body.clave);
 				usuario.localidad = req.body.localidad;
 				return usuario.save();

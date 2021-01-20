@@ -10,12 +10,12 @@ const { Usuario } = require("../model/usuario");
 passport.use(
 	new LocalStrategy(
 		{
-			usernameField: "nombreUsuario",
+			usernameField: "correo",
 			passwordField: "clave",
 			session: false,
 		},
 		(username, password, done) => {
-			Usuario.findOne({ nombreUsuario: username })
+			Usuario.findOne({ correo: username })
 				.then((data) => {
 					if (data == null) return done(null, false);
 					else if (!data.validPassword(password)) {

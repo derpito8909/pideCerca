@@ -3,13 +3,13 @@ const mongoose = require("mongoose");
 const crypto = require("crypto");
 const jwt = require("jsonwebtoken");
 const usuarioEsquema = new mongoose.Schema({
-	nombreUsuario: {
-		type: String,
-		unique: true,
-		required: true,
-	},
 	nombre: {
 		type: String,
+		required: true,
+	},
+	correo: {
+		type: String,
+		unique: true,
 		required: true,
 	},
 	localidad: String,
@@ -33,7 +33,7 @@ usuarioEsquema.methods.generateJWT = function () {
 	return jwt.sign(
 		{
 			_id: this._id,
-			nombreUsuario: this.nombreUsuario,			
+			correo: this.correo,			
 			expiracion: parseInt(expiracion.getTime() / 1000, 10),
 		},
 		process.env.JWT_SECRET
