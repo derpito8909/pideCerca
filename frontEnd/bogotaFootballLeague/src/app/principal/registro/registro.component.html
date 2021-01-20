@@ -1,0 +1,134 @@
+<div class="container">
+  <div
+    id="signupbox"
+    class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2"
+  >
+    <div class="register-panel">
+      <div class="register-heading">
+        <div class="register-title text-center"><strong>Registro</strong></div>
+      </div>
+      <div class="panel-body">
+        <form id="signupform" class="form-horizontal" role="form">
+          <div
+            id="signupalert"
+            style="display: none"
+            class="alert alert-danger"
+          >
+            <p>Error:</p>
+            <span></span>
+          </div>
+
+          <div class="form-group">
+            <label for="firstname" class="col-md-3 control-label">Nombre</label>
+            <div class="col-md-9">
+              <input
+                type="text"
+                [(ngModel)]="nombre"
+                class="form-control"
+                name="name"
+                placeholder="Nombre"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" class="col-md-3 control-label">Email</label>
+            <div class="col-md-9">
+              <input
+                type="text"
+                [(ngModel)]= "email"
+                class="form-control"
+                name="email"
+                placeholder="Email Address"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password" class="col-md-3 control-label"
+              >Contraseña</label
+            >
+            <div class="col-md-9">
+              <input
+                type="password"
+                [(ngModel)]="clave"
+                class="form-control"
+                name="passwd"
+                placeholder="Contraseña"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password" class="col-md-3 control-label"
+              >Contraseña</label
+            >
+            <div class="col-md-9">
+              <input
+                type="password"
+                [(ngModel)]="claveConfirmada"
+                class="form-control"
+                name="passwd"
+                placeholder="Confirmar Contraseña"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="Localidad" class="col-md-3 control-label"
+              >Localidad</label
+            >
+            <select
+              class="form-select col-md-8"
+              [(ngModel)]="localidad"
+              aria-label="Default select example"
+            >
+              <option selected>Selecione una</option>
+              <option value="Usaquén">Usaquén</option>
+              <option value="Chapinero">Chapinero</option>
+              <option value="Santa Fe">Santa Fe</option>
+              <option value="San Cristóbal">San Cristóbal</option>
+              <option value="Usme">Usme</option>
+              <option value="Tunjuelito">Tunjuelito</option>
+              <option value="Bosa">Bosa</option>
+              <option value="Kennedy">Kennedy</option>
+              <option value="Fontibón">Fontibón</option>
+              <option value="Engativá">Engativá</option>
+              <option value="Suba">Suba</option>
+              <option value="Barrios Unidos">Barrios Unidos</option>
+              <option value="Teusaquillo">Teusaquillo</option>
+              <option value="Los Mártires">Los Mártires</option>
+              <option value="Antonio Nariño">Antonio Nariño</option>
+              <option value="Puente Aranda">Puente Aranda</option>
+              <option value="La Candelaria">La Candelaria</option>
+              <option value="Rafael Uribe Uribe">Rafael Uribe Uribe</option>
+              <option value="Ciudad Bolívar">Ciudad Bolívar</option>
+              <option value="Sumapaz">Sumapaz</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <!-- Button -->
+            <div class="col-md-offset-3 col-md-9 text-justify">
+              <button id="btn-signup" type="submit" (click)="register()" class="btn btn-register">
+                <i class="icon-hand-right"></i>Crear
+              </button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-md-12 control">
+              <div class="linea">
+                O registrate con
+                <div class="social-buttons">
+                  <a href="#" class="btn btn-fb"
+                    ><i class="fa fa-facebook"></i> Facebook</a
+                  >
+                  <a href="#" class="btn btn-tw"
+                    ><i class="fa fa-twitter"></i> Twitter</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+.link-nav{
+    color: #E8EDDF;
+}
+.link-modal{
+    color: #333533;
+}
+.link-nav:hover{
+    background-color: #333533;
+}
+.open{
+    background-color: #333533;
+}
+.bg-nav{
+    background-color: #303841;
+    color: #E8EDDF;
+}
+
